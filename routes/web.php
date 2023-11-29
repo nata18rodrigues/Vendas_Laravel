@@ -10,11 +10,12 @@ Route::get('/', function () {
 });
 
 
+Route::get('/teste', function () {
+    return view('Vendas/index');
+});
+
 Route::group(['prefix'=>'vendas'], function() {
     #visualizar
     Route::get('/', [VendaController::class, 'index']);
 });
 
-Route::get('/', function () {
-    return View('Vendas.index');
-});
